@@ -2,7 +2,7 @@ import cv2
 
 # ---- [ SETTINGS ] ----
 # Use your IP Webcam stream URL
-camera_url = 1
+camera_url = "http://<Wifi IP>:<Port>/video"  #Use 'camera_url = 0' for using ondevice camera
 
 # ArUco dictionary
 aruco_dict_type = cv2.aruco.DICT_4X4_50
@@ -86,3 +86,4 @@ while True:
 # ---- [ CLEANUP ] ----
 cap.release()
 cv2.destroyAllWindows()
+
