@@ -10,6 +10,7 @@ aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_50)
 
 marker_image = aruco.generateImageMarker(aruco_dict, marker_id, marker_size)
 
+#white padding around marker to make it easily differentiable from background
 marker_padded = cv2.copyMakeBorder(marker_image, 50, 50, 50, 50, cv2.BORDER_CONSTANT, value=255)
 
 # Show the marker
@@ -20,3 +21,4 @@ cv2.destroyAllWindows()
 # Save the marker as an image
 cv2.imwrite(f"marker_ID_{marker_id}.png", marker_padded)
 print(f"Marker saved as marker_ID_{marker_id}.png")
+
